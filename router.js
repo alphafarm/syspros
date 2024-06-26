@@ -55,7 +55,8 @@ const Leads = {
   },
   methods: {
     fetchLeads() {
-      fetch('https://script.google.com/macros/s/AKfycbzFSGVEypnXLqk-IuTektD6nhZPW-24xdCQ5V8zCh38uoiWb3wva9BkWi3ToYLgviRu/exec', {
+      const endpoint = 'https://script.google.com/macros/s/AKfycbykOcvvGNN6qZxdo66V8Op5GjjNvcMGdavOE9vc3_LNd-SJDEV9wLcdSMh4NzjKTkkI/exec';
+      fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
