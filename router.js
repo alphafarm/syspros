@@ -55,8 +55,10 @@ const Leads = {
   },
   methods: {
     fetchLeads() {
-      const endpoint = 'https://script.google.com/macros/s/AKfycbyUO1xeCMTQSy65iB1fmvt99yudBstBHdTBuvj9bHkyW7vH1f9wd_7uA3FGRKZWaRs8/exec';
-      fetch(endpoint, {
+      const googleScriptEndpoint = 'https://script.google.com/macros/s/AKfycbxo7mJN-vIK7q0iAFoWXVsTM9a8UNfkAI1fWyRuMAybqquXqVczCfTxOCQ_diBtDs2X/exec';
+      const proxyEndpoint = `https://allcorsorigins.alpha-farm.workers.dev/?url=${encodeURIComponent(googleScriptEndpoint)}`;
+      
+      fetch(proxyEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
