@@ -55,11 +55,11 @@ const Leads = {
   },
   methods: {
     fetchLeads() {
-      const googleScriptEndpoint = 'https://script.google.com/macros/s/AKfycbxo7mJN-vIK7q0iAFoWXVsTM9a8UNfkAI1fWyRuMAybqquXqVczCfTxOCQ_diBtDs2X/exec';
-      const proxyEndpoint = `https://allcorsorigins.alpha-farm.workers.dev/?url=${encodeURIComponent(googleScriptEndpoint)}`;
+      const googleScriptEndpoint = 'https://script.google.com/macros/s/AKfycby1D1QkNgmnlfT18KENDTNGjMexDBZ6cT3MuTie5PSsPh88_WbPZ_ATHK3-419SVZou/exec';
       
-      fetch(proxyEndpoint, {
+      fetch(googleScriptEndpoint, {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
